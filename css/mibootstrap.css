@@ -1,0 +1,39 @@
+nav {
+    background-color: darkblue;
+    padding: 1rem;  
+}
+
+.main-container {
+    background-color: darkblue;
+    border-radius: 10px;
+    padding: 2rem;
+    color: white;
+}
+
+.btn-primary {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.bg-darkblue {
+  background-color: #001f3f !important; 
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
