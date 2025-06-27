@@ -24,11 +24,26 @@
   </head>
 
   <body onload="iniciarReloj()">
-    <nav class="navbar navbar-expand-lg bg-dark">
+    <nav class="navbar navbar-expand-lg bg-darkblue">
       <div class="container-fluid">
-        <a class="navbar-brand text-white" href="mibootstrap.html"
-          >Pulga Store</a
+        <ul class="navbar-nav me-3">
+      <li class="nav-item dropdown">
+        <a
+          class="navbar-brand dropdown-toggle text-white"
+          href="#"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
         >
+          Pulga Store
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="figuras.html">Figuras Coleccionables</a></li>
+          <li><a class="dropdown-item" href="tcg.html">Trading Card Games</a></li>
+        </ul>
+      </li>
+    </ul>
+    
         <button
           class="navbar-toggler"
           type="button"
@@ -103,12 +118,13 @@
       </button>
     </main>
 
-    <p id="fechaActual" class="text-center mt-4 text-primary fs-5"></p>
+  
 
-    <footer class="text-center mt-5 bg-dark text-white py-3">
+    <footer class="text-center mt-5 bg-darkblue text-white py-3">
       <p>&copy; 2023 Pulga Store. Todos los derechos reservados.</p>
       <p>Ubicación: Paseo Las Palmas, Providencia, Local 53</p>
       <p>Horario de atención: Lunes a Viernes de 10:00 a 19:00 hrs</p>
+       <p id="fechaActual" class="mt-3 text-white small"></p>
     </footer>
   </body>
 </html>

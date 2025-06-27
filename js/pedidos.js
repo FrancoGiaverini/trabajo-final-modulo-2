@@ -41,3 +41,18 @@ $(document).ready(function () {
     $('#mensajePedido').fadeOut();
   });
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const listaPedidos = document.querySelector("#listaPedidos ul");
+
+  // Delegación de eventos para manejar clicks en botones eliminar
+  listaPedidos.addEventListener("click", (e) => {
+    if (e.target.classList.contains("eliminar-pedido")) {
+      const pedidoAEliminar = e.target.closest("li");
+      if (pedidoAEliminar) {
+        pedidoAEliminar.remove();
+      }
+    }
+  });
+});
