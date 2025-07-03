@@ -9,7 +9,10 @@ $(document).ready(function () {
     } else {
       pedidos.forEach((pedido, i) => {
         $lista.append(
-          `<li class="list-group-item">#${i + 1} - Producto: <strong>${pedido.producto}</strong>, Cantidad: <strong>${pedido.cantidad}</strong></li>`
+          `<li class="list-group-item d-flex justify-content-between align-items-center">
+            #${i + 1} - Producto: <strong>${pedido.producto}</strong>, Cantidad: <strong>${pedido.cantidad}</strong>
+            <button class="btn btn-sm btn-danger eliminar-pedido" data-index="${i}">Eliminar</button>
+          </li>`
         );
       });
     }
@@ -40,19 +43,21 @@ $(document).ready(function () {
     $('#formPedido').show();
     $('#mensajePedido').fadeOut();
   });
-});
 
+ 
+  $('#listaPedidos').on('click', '.eliminar-pedido', function () {
+    const index = $(this).data('index');
+    const pedidos = JSON.parse(localStorage.getItem('pedidos')) || [];
+    pedidos.splice(index, 1); 
+    localStorage.setItem('pedidos', JSON.stringify(pedidos));
+    mostrarPedidos();
+  });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const listaPedidos = document.querySelector("#listaPedidos ul");
-
-  // Delegación de eventos para manejar clicks en botones eliminar
-  listaPedidos.addEventListener("click", (e) => {
-    if (e.target.classList.contains("eliminar-pedido")) {
-      const pedidoAEliminar = e.target.closest("li");
-      if (pedidoAEliminar) {
-        pedidoAEliminar.remove();
-      }
+  
+  $('#eliminarTodos').on('click', function () {
+    if (confirm('¿Estás seguro de eliminar todos los pedidos?')) {
+      localStorage.removeItem('pedidos');
+      mostrarPedidos();
     }
   });
 });

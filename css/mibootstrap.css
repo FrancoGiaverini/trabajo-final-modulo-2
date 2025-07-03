@@ -1,27 +1,74 @@
+
 nav {
-    background-color: darkblue;
-    padding: 1rem;  
-}
-
-.main-container {
-    background-color: darkblue;
-    border-radius: 10px;
-    padding: 2rem;
-    color: white;
-}
-
-.btn-primary {
-    background-color: #ff6600;
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    cursor: pointer;
+  background-color: darkblue;
+  padding: 1rem;
 }
 
 .bg-darkblue {
-  background-color: #001f3f !important; 
+  background-color: #001f3f !important;
 }
+
+.navbar .navbar-brand {
+  color: white;
+}
+
+.navbar .navbar-brand:hover {
+  color: #ff6600;
+}
+
+.navbar-nav .dropdown-menu {
+  background-color: #0b2340;
+  border: none;
+  padding: 0;
+  margin: 0;
+  min-width: 10rem;
+}
+
+.navbar-nav .dropdown-menu a.dropdown-item {
+  color: white;
+  padding: 8px 16px;
+  display: block;
+  text-decoration: none;
+}
+
+.navbar-nav .dropdown-menu a.dropdown-item:hover {
+  background-color: #1451a3;
+  color: white;
+  text-decoration: none;
+}
+
+
+.main-container {
+  background-color: darkblue;
+  border-radius: 10px;
+  padding: 2rem;
+  color: white;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+
+.btn-primary {
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-sm {
+  font-size: 0.875rem;
+  padding: 0.25rem 0.5rem;
+}
+
+
+select.form-select-sm,
+input.form-control-sm {
+  max-width: 300px;
+  width: 100%;
+}
+
 
 html, body {
   height: 100%;
@@ -38,33 +85,13 @@ main {
   flex: 1;
 }
 
+
 h1 {
   font-family: Arial, sans-serif;
   font-size: 2.5rem;
   font-weight: bold;
-  color: #0b2340; /* un azul oscuro */
+  color: #0b2340; 
   margin-top: 1rem;
   margin-bottom: 1rem;
   text-align: center;
-}
-
-.navbar-nav .dropdown-menu {
-  background-color: #0b2340; 
-  border: none;
-  padding: 0;
-  margin: 0;
-  min-width: 10rem;
-}
-
-.navbar-nav .dropdown-menu a.dropdown-item {
-  color: white;
-  padding: 8px 16px;
-  display: block;
-  text-decoration: none;
-}
-
-.navbar-nav .dropdown-menu a.dropdown-item:hover {
-  background-color: #1451a3; 
-  color: white;
-  text-decoration: none;
 }
